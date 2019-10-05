@@ -1,8 +1,9 @@
 using System; 
 using System.Collections.Generic;
+using System.Linq;
 using WordCounter.Models; 
 
-namespace WordCounter
+namespace WordCounter.WordCounter
 {
     public class Program
     {
@@ -10,10 +11,22 @@ namespace WordCounter
         {
             Console.WriteLine("Welcome to WordCounter");
             Console.WriteLine("Enter in a word: ");
-           //bool input; //declaring and checking Char.IsLetter(Char) method
-            string inputStr = (Console.ReadLine( ));
-            char[] Word = inputStr.ToCharArray(0, (inputStr.length-1));
-            Console.WriteLine("Input Str: " + inputStr + "\nWord: " + Word);
+            string newWord = Console.ReadLine();
+            // char[] newWordArr = newWord.ToCharArray(
+            //    // char[] newWordArr = new char[0][]{
+            // //}
+            // );
+            
+            // //char[] WordArr =  
+            // char[] res = newWordArr.ToDictionary(item => item);// item.Value.ToCharArray());
+            // 
+               // WordArr = Word.ToCharArray();
+              // char[]  WordCharArr = newWord.ToCharArray(Console.ReadLine());
+            //newWord = Word;//str
+          
+            //char[] Word = newWord0][newWord.length-1]; //inputStr.ToUpper(0, (inputStr.length-1));//0, (inputStr.length-1));
+            //  char[] inputStr = input;
+            Console.WriteLine("Input Str: " + newWord); //+ "\nWord: " + Word);
         }
 
     }
