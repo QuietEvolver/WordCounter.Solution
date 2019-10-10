@@ -1,7 +1,7 @@
 using System; 
 using System.Collections.Generic;
 using System.Linq;
-using WordCounter.Models; 
+using WordCounter.Model; 
 
 namespace WordCounter
 {
@@ -16,22 +16,13 @@ namespace WordCounter
             Console.WriteLine("Enter in a sentence: ");
             string Sentence = Console.ReadLine();
             
-            Counter newBaseCounter = new Counter(Word, Sentence);
+            Counter newBaseCounter = new Counter(Word.ToUpper(), Sentence.ToUpper());
             int result = newBaseCounter.WordCount();           
             char[]  WordCharArr =  (Word.ToUpper()).ToCharArray();
             bool resultWordChar; 
             resultWordChar = Char.IsLetter(WordCharArr[0]);
-            Console.WriteLine("rez resultWordChar: " +  resultWordChar + "weighted result: " + result);
-
-        //    // string[] SentenceSplit 
-        //     bool resultSentenceParse; 
-
-        //     char[]  resultSentenceParse =  (Sentence.ToUpper()).ToCharArray(); //CharSentenceArr
-      
-            Console.WriteLine("Input Str: " + "List: newBaseCounter/newBaseCounter.WordCharArr "+ newBaseCounter +  newBaseCounter.WordStrToCharArr + "\nWord: " + Word + "\nWordCharArr: " + WordCharArr[0]);
-        //     Console.WriteLine("Input Str: " + "List: newBaseCounter.SentenceCharArr "+   newBaseCounter.SentenceStrToCharArr + "\nSentence: " + Sentence + "\resultSentenceParse: " + resultSentenceParse[0]);
-            
+            Console.WriteLine("weighted result: " + result);
+            Console.WriteLine("Input Str: " + Sentence + "\nWord: " + Word );            
         }
-
     }
 }
